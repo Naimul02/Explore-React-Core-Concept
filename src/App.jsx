@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Todo from './ToDo'
 
 // react er duniyay function er ei ongsho ta k component bola hoy
 // ei function components er bhitore html er moto dekhte je jinis gulo likha hoy egulo k bola hoy javascript XML short bhabe bola hoy jsx.
@@ -9,21 +10,34 @@ function App() {
 return (
   // <></> eta k fragment ba kew kew empty tag ooo bole thake.
     <>
-  <h1>Vite + React</h1>
-  <Device name="Laptop"price ="55"></Device>
+  <h3>Vite + React</h3>
+  <Todo 
+  task="Learn React"
+   isDone={true}>
+   </Todo>
+  <Todo 
+  task="Explore Core Concepts"
+  isDone={false}></Todo>
+  <Todo
+   task="Try JSX"
+   isDone={true}>
+   </Todo>
+
+
+  {/* <Device name="Laptop"price ="55"></Device>
   <Device name="Mobile"price="17000"></Device>
   <Device name="watch" price="3000"></Device>
   <Device></Device>
 
   <Person></Person>
-  {/* <Person></Person>
   <Person></Person>
-  <Person></Person> */}
+  <Person></Person>
+  <Person></Person>
 
   <Student grade="7" score="99"></Student>
   <Student grade={12} score="85"></Student>
   <Student></Student>
-  <Developer></Developer>
+  <Developer></Developer> */}
     </>
   )
 }
