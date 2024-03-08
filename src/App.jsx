@@ -3,15 +3,57 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './ToDo'
+import Actor from './Actor';
+import Singer from './Singer'
+import BooksStore from './BookStore'
 
 // react er duniyay function er ei ongsho ta k component bola hoy
 // ei function components er bhitore html er moto dekhte je jinis gulo likha hoy egulo k bola hoy javascript XML short bhabe bola hoy jsx.
+
+
+// Ei App component ta amader main component
 function App() {
+const actors = ['Sakib' , 'Raj' , 'Jasim' , 'Rubel' , 'Salman Shah'];
+
+const books = [
+    {id : 1 , name :"physics" , price : 100},
+    {id : 2 , name :"Math" , price : 120},
+    {id : 3 , name :"Chemistry" , price : 130},
+    {id : 4 , name :"Biology" , price : 140},
+]
+const singers = [
+    {id : 1 , name : 'Dr. Mahfuzur Rahman' , age : 68},
+    {id : 2 , name : 'Eva Rahman' , age : 38},
+    {id : 3 , name : 'Shuvro Dev' , age : 58},
+    {id : 4 , name : 'Pritom' , age : 28},
+]
+
+
+
+
+
 return (
   // <></> eta k fragment ba kew kew empty tag ooo bole thake.
     <>
   <h3>Vite + React</h3>
-  <Todo 
+    <BooksStore books={books}></BooksStore>
+
+  {
+      singers.map(singer => <Singer singer={singer}></Singer>)
+  }
+
+
+
+
+
+
+  <Actor name={"Bappa Raz"}></Actor>
+
+  {
+      actors.map(actor => <Actor name={actor}></Actor>)
+  }
+
+  {/* <Todo 
   task="Learn React"
    isDone={true}>
    </Todo>
@@ -21,7 +63,7 @@ return (
   <Todo
    task="Try JSX"
    isDone={true}>
-   </Todo>
+   </Todo> */}
 
 
   {/* <Device name="Laptop"price ="55"></Device>
