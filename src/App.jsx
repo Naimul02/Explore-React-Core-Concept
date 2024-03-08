@@ -21,7 +21,7 @@ return (
   <Person></Person> */}
 
   <Student grade="7" score="99"></Student>
-  <Student></Student>
+  <Student grade={12} score="85"></Student>
   <Student></Student>
   <Developer></Developer>
     </>
@@ -38,16 +38,16 @@ function Person(){
   const person = {name : 'sakib' , age : 12}
     return  <h3>I am a {person.name} with : {age + money}</h3>
 }
-const {grade , score} = {grade : '7' , score : '99'}
-function Student(props){
-  console.log(props)
+// const {grade , score} = {grade : '7' , score : '99'}
+function Student({grade=1 , score=0}){
+  // console.log(props)
   // return er pashe jodi div ta na thake tahole se kintu undefined return kore dibe.e jhamela thek mukti paowar jonno amra () bracket use kore thaki
     return (
       // html er moto jeta amra likhtechi eta kintu html na etar nam holo jsx
     <div className="student">
         <h3>This is a student</h3>
-        <p>Name : </p>
-        <p>Age : </p>
+        <p>Class : {grade} </p>
+        <p>Score : {score} </p>
 
     </div>
     )
